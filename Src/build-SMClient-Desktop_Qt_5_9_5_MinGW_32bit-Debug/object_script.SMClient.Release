@@ -1,0 +1,16 @@
+INPUT(
+./release\networkdev.o
+./release\networkprotocol.o
+./release\main.o
+./release\mainpage.o
+./release\loginpage.o
+./release\appinit.o
+./release\iconhelper.o
+./release\qrc_images.o
+./release\moc_networkdev.o
+./release\moc_networkprotocol.o
+./release\moc_mainpage.o
+./release\moc_loginpage.o
+./release\moc_appinit.o
+./release\moc_iconhelper.o
+);

@@ -1,0 +1,12 @@
+INPUT(
+./debug\serialportdev.o
+./debug\serialportprotocol.o
+./debug\roundprogressbar.o
+./debug\main.o
+./debug\mainpage.o
+./debug\qrc_images.o
+./debug\moc_serialportdev.o
+./debug\moc_serialportprotocol.o
+./debug\moc_roundprogressbar.o
+./debug\moc_mainpage.o
+);

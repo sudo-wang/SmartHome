@@ -1,0 +1,12 @@
+INPUT(
+./release\serialportdev.o
+./release\serialportprotocol.o
+./release\roundprogressbar.o
+./release\main.o
+./release\mainpage.o
+./release\qrc_images.o
+./release\moc_serialportdev.o
+./release\moc_serialportprotocol.o
+./release\moc_roundprogressbar.o
+./release\moc_mainpage.o
+);

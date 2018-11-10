@@ -1,0 +1,16 @@
+INPUT(
+./debug\networkdev.o
+./debug\networkprotocol.o
+./debug\main.o
+./debug\mainpage.o
+./debug\loginpage.o
+./debug\appinit.o
+./debug\iconhelper.o
+./debug\qrc_images.o
+./debug\moc_networkdev.o
+./debug\moc_networkprotocol.o
+./debug\moc_mainpage.o
+./debug\moc_loginpage.o
+./debug\moc_appinit.o
+./debug\moc_iconhelper.o
+);
