@@ -10,7 +10,7 @@ NetWorkProtocol::NetWorkProtocol(QObject *parent) : QObject(parent)
     readBuffer.clear();
     time = new QTimer;
     connect(time,SIGNAL(timeout()),this,SLOT(timeoutSlot()));
-    time->start(3000);
+    time->start(100);
     connect(NetWorkDev::getObject(),
             SIGNAL(readData(QByteArray)),
             this,

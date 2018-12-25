@@ -17,6 +17,9 @@ MainPage::MainPage(QWidget *parent) :
     ui->setupUi(this);
     this->initForm();
     this->initNav();
+    updateUITimer = new QTimer;
+    connect(updateUITimer,SIGNAL(timeout()),
+            this,SLOT(updateUITimerSlot()));
 }
 
 MainPage::~MainPage()
@@ -131,6 +134,39 @@ void MainPage::on_btnMsg_pressed()      // 加入退出登录时，所有设备�
     NetWorkProtocol::getObject()->setCurtains(1001,4,0);
     NetWorkProtocol::getObject()->setAir(1001,1,Heating,Auto,25);
     exit(0);
+}
+
+void MainPage::updateUITimerSlot()
+{
+    //获取并显示co2数据
+    ui->label_13->setNum(NetWorkProtocol::getObject()->co21);
+
+    //获取并显示湿度数据
+    ui->label_14->setNum(NetWorkProtocol::getObject()->hu1);
+
+    //获取并显示反射数据
+    QString re = NetWorkProtocol::getObject()->re1?"true":"flase";
+    ui->label_15->setText(re);
+
+    //获取并显示大气压数据
+    ui->label_16->setNum(NetWorkProtocol::getObject()->atmospheric1);
+
+    //获取并显示光照数据
+    ui->label_17->setNum(NetWorkProtocol::getObject()->light1);
+
+    //获取并显示温度数据
+    ui->label_18->setNum(NetWorkProtocol::getObject()->te1);
+
+    //获取并显示火光数据
+    QString fire = NetWorkProtocol::getObject()->fire1?"true":"flase";
+    ui->label_19->setText(fire);
+
+    //获取并显示对射数据
+    QString os = NetWorkProtocol::getObject()->os1?"true":"flase";
+    ui->label_20->setText(os);
+
+    //获取并显示紫外线数据
+    ui->label_21->setNum(NetWorkProtocol::getObject()->uv1);
 }
 
 
@@ -393,3 +429,9 @@ void MainPage::on_pushButton_clicked()
     }
 }
 
+//传感器界面
+void MainPage::on_btnShow_clicked()
+{
+    qDebug() << "进入传感器界面";
+    updateUITimer->start(100);
+}

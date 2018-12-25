@@ -34,13 +34,9 @@ QT_BEGIN_NAMESPACE
 class Ui_MainPage
 {
 public:
+    QGridLayout *gridLayout_2;
     QWidget *widgetMain;
     QVBoxLayout *verticalLayout;
-    QWidget *widgetTop;
-    QHBoxLayout *horizontalLayout;
-    QPushButton *btnReturn;
-    QLabel *labTitle;
-    QPushButton *btnMsg;
     QStackedWidget *stackedWidget;
     QWidget *page;
     QGridLayout *gridLayout;
@@ -51,6 +47,25 @@ public:
     QToolButton *btnWindow;
     QToolButton *btnCancellation;
     QWidget *Show;
+    QGridLayout *gridLayout_3;
+    QLabel *label_2;
+    QLabel *label_13;
+    QLabel *label_7;
+    QLabel *label_14;
+    QLabel *label_10;
+    QLabel *label_15;
+    QLabel *label_5;
+    QLabel *label_16;
+    QLabel *label_8;
+    QLabel *label_17;
+    QLabel *label_11;
+    QLabel *label_18;
+    QLabel *label_6;
+    QLabel *label_19;
+    QLabel *label_9;
+    QLabel *label_20;
+    QLabel *label_12;
+    QLabel *label_21;
     QWidget *Heater;
     QCheckBox *heartBtn_2;
     QCheckBox *heartBtn;
@@ -72,10 +87,10 @@ public:
     QLabel *label;
     QCheckBox *airBtn;
     QPushButton *pushButton;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout_8;
     QGroupBox *groupBox;
-    QWidget *widget1;
+    QWidget *layoutWidget1;
     QHBoxLayout *horizontalLayout_5;
     QComboBox *cbAirModel;
     QComboBox *cbAirFun;
@@ -87,7 +102,7 @@ public:
     QGroupBox *groupBox_3;
     QLCDNumber *lnTe;
     QWidget *LED;
-    QWidget *layoutWidget;
+    QWidget *layoutWidget2;
     QHBoxLayout *horizontalLayout_2;
     QVBoxLayout *verticalLayout_5;
     QCheckBox *ledBtn;
@@ -112,66 +127,33 @@ public:
     QSlider *curtainsSlider_2;
     QSlider *curtainsSlider_3;
     QSlider *curtainsSlider_4;
+    QWidget *widgetTop;
+    QHBoxLayout *horizontalLayout;
+    QPushButton *btnReturn;
+    QLabel *labTitle;
+    QPushButton *btnMsg;
 
     void setupUi(QWidget *MainPage)
     {
         if (MainPage->objectName().isEmpty())
             MainPage->setObjectName(QStringLiteral("MainPage"));
         MainPage->resize(798, 479);
+        gridLayout_2 = new QGridLayout(MainPage);
+        gridLayout_2->setSpacing(6);
+        gridLayout_2->setContentsMargins(11, 11, 11, 11);
+        gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
         widgetMain = new QWidget(MainPage);
         widgetMain->setObjectName(QStringLiteral("widgetMain"));
-        widgetMain->setGeometry(QRect(0, 0, 800, 480));
         verticalLayout = new QVBoxLayout(widgetMain);
         verticalLayout->setSpacing(0);
         verticalLayout->setContentsMargins(11, 11, 11, 11);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
-        widgetTop = new QWidget(widgetMain);
-        widgetTop->setObjectName(QStringLiteral("widgetTop"));
+        stackedWidget = new QStackedWidget(widgetMain);
+        stackedWidget->setObjectName(QStringLiteral("stackedWidget"));
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(widgetTop->sizePolicy().hasHeightForWidth());
-        widgetTop->setSizePolicy(sizePolicy);
-        widgetTop->setMaximumSize(QSize(16777215, 45));
-        horizontalLayout = new QHBoxLayout(widgetTop);
-        horizontalLayout->setSpacing(6);
-        horizontalLayout->setContentsMargins(11, 11, 11, 11);
-        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
-        horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        btnReturn = new QPushButton(widgetTop);
-        btnReturn->setObjectName(QStringLiteral("btnReturn"));
-        QSizePolicy sizePolicy1(QSizePolicy::Minimum, QSizePolicy::Expanding);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(btnReturn->sizePolicy().hasHeightForWidth());
-        btnReturn->setSizePolicy(sizePolicy1);
-
-        horizontalLayout->addWidget(btnReturn);
-
-        labTitle = new QLabel(widgetTop);
-        labTitle->setObjectName(QStringLiteral("labTitle"));
-        QSizePolicy sizePolicy2(QSizePolicy::Expanding, QSizePolicy::Preferred);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(labTitle->sizePolicy().hasHeightForWidth());
-        labTitle->setSizePolicy(sizePolicy2);
-        labTitle->setAlignment(Qt::AlignCenter);
-
-        horizontalLayout->addWidget(labTitle);
-
-        btnMsg = new QPushButton(widgetTop);
-        btnMsg->setObjectName(QStringLiteral("btnMsg"));
-        sizePolicy1.setHeightForWidth(btnMsg->sizePolicy().hasHeightForWidth());
-        btnMsg->setSizePolicy(sizePolicy1);
-
-        horizontalLayout->addWidget(btnMsg);
-
-
-        verticalLayout->addWidget(widgetTop);
-
-        stackedWidget = new QStackedWidget(widgetMain);
-        stackedWidget->setObjectName(QStringLiteral("stackedWidget"));
         sizePolicy.setHeightForWidth(stackedWidget->sizePolicy().hasHeightForWidth());
         stackedWidget->setSizePolicy(sizePolicy);
         page = new QWidget();
@@ -183,11 +165,11 @@ public:
         gridLayout->setContentsMargins(20, 20, 20, 20);
         btnShow = new QToolButton(page);
         btnShow->setObjectName(QStringLiteral("btnShow"));
-        QSizePolicy sizePolicy3(QSizePolicy::Expanding, QSizePolicy::Expanding);
-        sizePolicy3.setHorizontalStretch(0);
-        sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(btnShow->sizePolicy().hasHeightForWidth());
-        btnShow->setSizePolicy(sizePolicy3);
+        QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(btnShow->sizePolicy().hasHeightForWidth());
+        btnShow->setSizePolicy(sizePolicy1);
         btnShow->setStyleSheet(QStringLiteral(""));
         btnShow->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
 
@@ -195,8 +177,8 @@ public:
 
         btnHeater = new QToolButton(page);
         btnHeater->setObjectName(QStringLiteral("btnHeater"));
-        sizePolicy3.setHeightForWidth(btnHeater->sizePolicy().hasHeightForWidth());
-        btnHeater->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(btnHeater->sizePolicy().hasHeightForWidth());
+        btnHeater->setSizePolicy(sizePolicy1);
         btnHeater->setStyleSheet(QStringLiteral(""));
         btnHeater->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
 
@@ -204,8 +186,8 @@ public:
 
         btnAirCon = new QToolButton(page);
         btnAirCon->setObjectName(QStringLiteral("btnAirCon"));
-        sizePolicy3.setHeightForWidth(btnAirCon->sizePolicy().hasHeightForWidth());
-        btnAirCon->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(btnAirCon->sizePolicy().hasHeightForWidth());
+        btnAirCon->setSizePolicy(sizePolicy1);
         btnAirCon->setStyleSheet(QStringLiteral(""));
         btnAirCon->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
 
@@ -213,8 +195,8 @@ public:
 
         btnLED = new QToolButton(page);
         btnLED->setObjectName(QStringLiteral("btnLED"));
-        sizePolicy3.setHeightForWidth(btnLED->sizePolicy().hasHeightForWidth());
-        btnLED->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(btnLED->sizePolicy().hasHeightForWidth());
+        btnLED->setSizePolicy(sizePolicy1);
         btnLED->setStyleSheet(QStringLiteral(""));
         btnLED->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
 
@@ -222,8 +204,8 @@ public:
 
         btnWindow = new QToolButton(page);
         btnWindow->setObjectName(QStringLiteral("btnWindow"));
-        sizePolicy3.setHeightForWidth(btnWindow->sizePolicy().hasHeightForWidth());
-        btnWindow->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(btnWindow->sizePolicy().hasHeightForWidth());
+        btnWindow->setSizePolicy(sizePolicy1);
         btnWindow->setStyleSheet(QStringLiteral(""));
         btnWindow->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
 
@@ -231,8 +213,8 @@ public:
 
         btnCancellation = new QToolButton(page);
         btnCancellation->setObjectName(QStringLiteral("btnCancellation"));
-        sizePolicy3.setHeightForWidth(btnCancellation->sizePolicy().hasHeightForWidth());
-        btnCancellation->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(btnCancellation->sizePolicy().hasHeightForWidth());
+        btnCancellation->setSizePolicy(sizePolicy1);
         btnCancellation->setStyleSheet(QStringLiteral(""));
         btnCancellation->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
 
@@ -241,6 +223,100 @@ public:
         stackedWidget->addWidget(page);
         Show = new QWidget();
         Show->setObjectName(QStringLiteral("Show"));
+        gridLayout_3 = new QGridLayout(Show);
+        gridLayout_3->setSpacing(6);
+        gridLayout_3->setContentsMargins(11, 11, 11, 11);
+        gridLayout_3->setObjectName(QStringLiteral("gridLayout_3"));
+        label_2 = new QLabel(Show);
+        label_2->setObjectName(QStringLiteral("label_2"));
+
+        gridLayout_3->addWidget(label_2, 0, 0, 1, 1);
+
+        label_13 = new QLabel(Show);
+        label_13->setObjectName(QStringLiteral("label_13"));
+
+        gridLayout_3->addWidget(label_13, 0, 1, 1, 1);
+
+        label_7 = new QLabel(Show);
+        label_7->setObjectName(QStringLiteral("label_7"));
+
+        gridLayout_3->addWidget(label_7, 0, 2, 1, 1);
+
+        label_14 = new QLabel(Show);
+        label_14->setObjectName(QStringLiteral("label_14"));
+
+        gridLayout_3->addWidget(label_14, 0, 3, 1, 1);
+
+        label_10 = new QLabel(Show);
+        label_10->setObjectName(QStringLiteral("label_10"));
+
+        gridLayout_3->addWidget(label_10, 0, 4, 1, 1);
+
+        label_15 = new QLabel(Show);
+        label_15->setObjectName(QStringLiteral("label_15"));
+
+        gridLayout_3->addWidget(label_15, 0, 5, 1, 1);
+
+        label_5 = new QLabel(Show);
+        label_5->setObjectName(QStringLiteral("label_5"));
+
+        gridLayout_3->addWidget(label_5, 1, 0, 1, 1);
+
+        label_16 = new QLabel(Show);
+        label_16->setObjectName(QStringLiteral("label_16"));
+
+        gridLayout_3->addWidget(label_16, 1, 1, 1, 1);
+
+        label_8 = new QLabel(Show);
+        label_8->setObjectName(QStringLiteral("label_8"));
+
+        gridLayout_3->addWidget(label_8, 1, 2, 1, 1);
+
+        label_17 = new QLabel(Show);
+        label_17->setObjectName(QStringLiteral("label_17"));
+
+        gridLayout_3->addWidget(label_17, 1, 3, 1, 1);
+
+        label_11 = new QLabel(Show);
+        label_11->setObjectName(QStringLiteral("label_11"));
+
+        gridLayout_3->addWidget(label_11, 1, 4, 1, 1);
+
+        label_18 = new QLabel(Show);
+        label_18->setObjectName(QStringLiteral("label_18"));
+
+        gridLayout_3->addWidget(label_18, 1, 5, 1, 1);
+
+        label_6 = new QLabel(Show);
+        label_6->setObjectName(QStringLiteral("label_6"));
+
+        gridLayout_3->addWidget(label_6, 2, 0, 1, 1);
+
+        label_19 = new QLabel(Show);
+        label_19->setObjectName(QStringLiteral("label_19"));
+
+        gridLayout_3->addWidget(label_19, 2, 1, 1, 1);
+
+        label_9 = new QLabel(Show);
+        label_9->setObjectName(QStringLiteral("label_9"));
+
+        gridLayout_3->addWidget(label_9, 2, 2, 1, 1);
+
+        label_20 = new QLabel(Show);
+        label_20->setObjectName(QStringLiteral("label_20"));
+
+        gridLayout_3->addWidget(label_20, 2, 3, 1, 1);
+
+        label_12 = new QLabel(Show);
+        label_12->setObjectName(QStringLiteral("label_12"));
+
+        gridLayout_3->addWidget(label_12, 2, 4, 1, 1);
+
+        label_21 = new QLabel(Show);
+        label_21->setObjectName(QStringLiteral("label_21"));
+
+        gridLayout_3->addWidget(label_21, 2, 5, 1, 1);
+
         stackedWidget->addWidget(Show);
         Heater = new QWidget();
         Heater->setObjectName(QStringLiteral("Heater"));
@@ -285,11 +361,11 @@ public:
         verticalLayout_6->setSizeConstraint(QLayout::SetDefaultConstraint);
         heartLineEdit_3 = new QLineEdit(layoutWidget_2);
         heartLineEdit_3->setObjectName(QStringLiteral("heartLineEdit_3"));
-        QSizePolicy sizePolicy4(QSizePolicy::Expanding, QSizePolicy::Expanding);
-        sizePolicy4.setHorizontalStretch(0);
-        sizePolicy4.setVerticalStretch(4);
-        sizePolicy4.setHeightForWidth(heartLineEdit_3->sizePolicy().hasHeightForWidth());
-        heartLineEdit_3->setSizePolicy(sizePolicy4);
+        QSizePolicy sizePolicy2(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(4);
+        sizePolicy2.setHeightForWidth(heartLineEdit_3->sizePolicy().hasHeightForWidth());
+        heartLineEdit_3->setSizePolicy(sizePolicy2);
         QFont font;
         font.setFamily(QStringLiteral("Agency FB"));
         font.setPointSize(20);
@@ -332,8 +408,8 @@ public:
         verticalLayout_7->setSizeConstraint(QLayout::SetDefaultConstraint);
         heartLineEdit_4 = new QLineEdit(layoutWidget_3);
         heartLineEdit_4->setObjectName(QStringLiteral("heartLineEdit_4"));
-        sizePolicy4.setHeightForWidth(heartLineEdit_4->sizePolicy().hasHeightForWidth());
-        heartLineEdit_4->setSizePolicy(sizePolicy4);
+        sizePolicy2.setHeightForWidth(heartLineEdit_4->sizePolicy().hasHeightForWidth());
+        heartLineEdit_4->setSizePolicy(sizePolicy2);
         QFont font1;
         font1.setFamily(QStringLiteral("Agency FB"));
         font1.setPointSize(20);
@@ -385,39 +461,39 @@ public:
         pushButton->setObjectName(QStringLiteral("pushButton"));
         pushButton->setGeometry(QRect(680, 330, 91, 31));
         pushButton->setStyleSheet(QStringLiteral("background-color: transparent"));
-        widget = new QWidget(AirCon);
-        widget->setObjectName(QStringLiteral("widget"));
-        widget->setGeometry(QRect(30, 120, 741, 181));
-        horizontalLayout_8 = new QHBoxLayout(widget);
+        layoutWidget = new QWidget(AirCon);
+        layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
+        layoutWidget->setGeometry(QRect(30, 120, 741, 181));
+        horizontalLayout_8 = new QHBoxLayout(layoutWidget);
         horizontalLayout_8->setSpacing(6);
         horizontalLayout_8->setContentsMargins(11, 11, 11, 11);
         horizontalLayout_8->setObjectName(QStringLiteral("horizontalLayout_8"));
         horizontalLayout_8->setContentsMargins(0, 0, 0, 0);
-        groupBox = new QGroupBox(widget);
+        groupBox = new QGroupBox(layoutWidget);
         groupBox->setObjectName(QStringLiteral("groupBox"));
-        widget1 = new QWidget(groupBox);
-        widget1->setObjectName(QStringLiteral("widget1"));
-        widget1->setGeometry(QRect(30, 50, 191, 41));
-        horizontalLayout_5 = new QHBoxLayout(widget1);
+        layoutWidget1 = new QWidget(groupBox);
+        layoutWidget1->setObjectName(QStringLiteral("layoutWidget1"));
+        layoutWidget1->setGeometry(QRect(30, 50, 191, 41));
+        horizontalLayout_5 = new QHBoxLayout(layoutWidget1);
         horizontalLayout_5->setSpacing(6);
         horizontalLayout_5->setContentsMargins(11, 11, 11, 11);
         horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
         horizontalLayout_5->setContentsMargins(0, 0, 0, 0);
-        cbAirModel = new QComboBox(widget1);
+        cbAirModel = new QComboBox(layoutWidget1);
         cbAirModel->setObjectName(QStringLiteral("cbAirModel"));
-        QSizePolicy sizePolicy5(QSizePolicy::Preferred, QSizePolicy::Expanding);
-        sizePolicy5.setHorizontalStretch(0);
-        sizePolicy5.setVerticalStretch(0);
-        sizePolicy5.setHeightForWidth(cbAirModel->sizePolicy().hasHeightForWidth());
-        cbAirModel->setSizePolicy(sizePolicy5);
+        QSizePolicy sizePolicy3(QSizePolicy::Preferred, QSizePolicy::Expanding);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(cbAirModel->sizePolicy().hasHeightForWidth());
+        cbAirModel->setSizePolicy(sizePolicy3);
         cbAirModel->setStyleSheet(QStringLiteral("background-color: transparent"));
 
         horizontalLayout_5->addWidget(cbAirModel);
 
-        cbAirFun = new QComboBox(widget1);
+        cbAirFun = new QComboBox(layoutWidget1);
         cbAirFun->setObjectName(QStringLiteral("cbAirFun"));
-        sizePolicy5.setHeightForWidth(cbAirFun->sizePolicy().hasHeightForWidth());
-        cbAirFun->setSizePolicy(sizePolicy5);
+        sizePolicy3.setHeightForWidth(cbAirFun->sizePolicy().hasHeightForWidth());
+        cbAirFun->setSizePolicy(sizePolicy3);
         cbAirFun->setMaximumSize(QSize(16777215, 16777215));
         cbAirFun->setStyleSheet(QStringLiteral("background-color: transparent"));
         cbAirFun->setEditable(false);
@@ -427,7 +503,7 @@ public:
 
         horizontalLayout_8->addWidget(groupBox);
 
-        groupBox_2 = new QGroupBox(widget);
+        groupBox_2 = new QGroupBox(layoutWidget);
         groupBox_2->setObjectName(QStringLiteral("groupBox_2"));
         layoutWidget_5 = new QWidget(groupBox_2);
         layoutWidget_5->setObjectName(QStringLiteral("layoutWidget_5"));
@@ -439,11 +515,11 @@ public:
         horizontalLayout_7->setContentsMargins(0, 0, 0, 0);
         btnAirSub = new QPushButton(layoutWidget_5);
         btnAirSub->setObjectName(QStringLiteral("btnAirSub"));
-        QSizePolicy sizePolicy6(QSizePolicy::Minimum, QSizePolicy::Fixed);
-        sizePolicy6.setHorizontalStretch(100);
-        sizePolicy6.setVerticalStretch(0);
-        sizePolicy6.setHeightForWidth(btnAirSub->sizePolicy().hasHeightForWidth());
-        btnAirSub->setSizePolicy(sizePolicy6);
+        QSizePolicy sizePolicy4(QSizePolicy::Minimum, QSizePolicy::Fixed);
+        sizePolicy4.setHorizontalStretch(100);
+        sizePolicy4.setVerticalStretch(0);
+        sizePolicy4.setHeightForWidth(btnAirSub->sizePolicy().hasHeightForWidth());
+        btnAirSub->setSizePolicy(sizePolicy4);
         btnAirSub->setMaximumSize(QSize(50, 50));
         QFont font3;
         font3.setFamily(QStringLiteral("Agency FB"));
@@ -457,11 +533,11 @@ public:
 
         btnAirAdd = new QPushButton(layoutWidget_5);
         btnAirAdd->setObjectName(QStringLiteral("btnAirAdd"));
-        QSizePolicy sizePolicy7(QSizePolicy::Minimum, QSizePolicy::MinimumExpanding);
-        sizePolicy7.setHorizontalStretch(0);
-        sizePolicy7.setVerticalStretch(0);
-        sizePolicy7.setHeightForWidth(btnAirAdd->sizePolicy().hasHeightForWidth());
-        btnAirAdd->setSizePolicy(sizePolicy7);
+        QSizePolicy sizePolicy5(QSizePolicy::Minimum, QSizePolicy::MinimumExpanding);
+        sizePolicy5.setHorizontalStretch(0);
+        sizePolicy5.setVerticalStretch(0);
+        sizePolicy5.setHeightForWidth(btnAirAdd->sizePolicy().hasHeightForWidth());
+        btnAirAdd->setSizePolicy(sizePolicy5);
         btnAirAdd->setMaximumSize(QSize(50, 50));
         btnAirAdd->setFont(font3);
         btnAirAdd->setStyleSheet(QStringLiteral("background-color: transparent"));
@@ -471,7 +547,7 @@ public:
 
         horizontalLayout_8->addWidget(groupBox_2);
 
-        groupBox_3 = new QGroupBox(widget);
+        groupBox_3 = new QGroupBox(layoutWidget);
         groupBox_3->setObjectName(QStringLiteral("groupBox_3"));
         lnTe = new QLCDNumber(groupBox_3);
         lnTe->setObjectName(QStringLiteral("lnTe"));
@@ -484,10 +560,10 @@ public:
         stackedWidget->addWidget(AirCon);
         LED = new QWidget();
         LED->setObjectName(QStringLiteral("LED"));
-        layoutWidget = new QWidget(LED);
-        layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
-        layoutWidget->setGeometry(QRect(110, 70, 551, 281));
-        horizontalLayout_2 = new QHBoxLayout(layoutWidget);
+        layoutWidget2 = new QWidget(LED);
+        layoutWidget2->setObjectName(QStringLiteral("layoutWidget2"));
+        layoutWidget2->setGeometry(QRect(110, 70, 551, 281));
+        horizontalLayout_2 = new QHBoxLayout(layoutWidget2);
         horizontalLayout_2->setSpacing(6);
         horizontalLayout_2->setContentsMargins(11, 11, 11, 11);
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
@@ -495,7 +571,7 @@ public:
         verticalLayout_5 = new QVBoxLayout();
         verticalLayout_5->setSpacing(6);
         verticalLayout_5->setObjectName(QStringLiteral("verticalLayout_5"));
-        ledBtn = new QCheckBox(layoutWidget);
+        ledBtn = new QCheckBox(layoutWidget2);
         ledBtn->setObjectName(QStringLiteral("ledBtn"));
         ledBtn->setStyleSheet(QLatin1String("QCheckBox::indicator:unchecked {\n"
 "image: url(:/images/switch-off-icon.png);\n"
@@ -507,7 +583,7 @@ public:
 
         verticalLayout_5->addWidget(ledBtn);
 
-        ledBtn_2 = new QCheckBox(layoutWidget);
+        ledBtn_2 = new QCheckBox(layoutWidget2);
         ledBtn_2->setObjectName(QStringLiteral("ledBtn_2"));
         ledBtn_2->setStyleSheet(QLatin1String("QCheckBox::indicator:unchecked {\n"
 "image: url(:/images/switch-off-icon.png);\n"
@@ -519,7 +595,7 @@ public:
 
         verticalLayout_5->addWidget(ledBtn_2);
 
-        ledBtn_3 = new QCheckBox(layoutWidget);
+        ledBtn_3 = new QCheckBox(layoutWidget2);
         ledBtn_3->setObjectName(QStringLiteral("ledBtn_3"));
         ledBtn_3->setStyleSheet(QLatin1String("QCheckBox::indicator:unchecked {\n"
 "image: url(:/images/switch-off-icon.png);\n"
@@ -531,7 +607,7 @@ public:
 
         verticalLayout_5->addWidget(ledBtn_3);
 
-        ledBtn_4 = new QCheckBox(layoutWidget);
+        ledBtn_4 = new QCheckBox(layoutWidget2);
         ledBtn_4->setObjectName(QStringLiteral("ledBtn_4"));
         ledBtn_4->setStyleSheet(QLatin1String("QCheckBox::indicator:unchecked {\n"
 "image: url(:/images/switch-off-icon.png);\n"
@@ -549,28 +625,28 @@ public:
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setSpacing(6);
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
-        ledSlider = new QSlider(layoutWidget);
+        ledSlider = new QSlider(layoutWidget2);
         ledSlider->setObjectName(QStringLiteral("ledSlider"));
         ledSlider->setMaximum(255);
         ledSlider->setOrientation(Qt::Horizontal);
 
         verticalLayout_2->addWidget(ledSlider);
 
-        ledSlider_2 = new QSlider(layoutWidget);
+        ledSlider_2 = new QSlider(layoutWidget2);
         ledSlider_2->setObjectName(QStringLiteral("ledSlider_2"));
         ledSlider_2->setMaximum(255);
         ledSlider_2->setOrientation(Qt::Horizontal);
 
         verticalLayout_2->addWidget(ledSlider_2);
 
-        ledSlider_3 = new QSlider(layoutWidget);
+        ledSlider_3 = new QSlider(layoutWidget2);
         ledSlider_3->setObjectName(QStringLiteral("ledSlider_3"));
         ledSlider_3->setMaximum(255);
         ledSlider_3->setOrientation(Qt::Horizontal);
 
         verticalLayout_2->addWidget(ledSlider_3);
 
-        ledSlider_4 = new QSlider(layoutWidget);
+        ledSlider_4 = new QSlider(layoutWidget2);
         ledSlider_4->setObjectName(QStringLiteral("ledSlider_4"));
         ledSlider_4->setMaximum(255);
         ledSlider_4->setOrientation(Qt::Horizontal);
@@ -683,10 +759,54 @@ public:
 
         verticalLayout->addWidget(stackedWidget);
 
+        widgetTop = new QWidget(widgetMain);
+        widgetTop->setObjectName(QStringLiteral("widgetTop"));
+        sizePolicy.setHeightForWidth(widgetTop->sizePolicy().hasHeightForWidth());
+        widgetTop->setSizePolicy(sizePolicy);
+        widgetTop->setMaximumSize(QSize(16777215, 45));
+        horizontalLayout = new QHBoxLayout(widgetTop);
+        horizontalLayout->setSpacing(6);
+        horizontalLayout->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        horizontalLayout->setContentsMargins(0, 0, 0, 0);
+        btnReturn = new QPushButton(widgetTop);
+        btnReturn->setObjectName(QStringLiteral("btnReturn"));
+        QSizePolicy sizePolicy6(QSizePolicy::Minimum, QSizePolicy::Expanding);
+        sizePolicy6.setHorizontalStretch(0);
+        sizePolicy6.setVerticalStretch(0);
+        sizePolicy6.setHeightForWidth(btnReturn->sizePolicy().hasHeightForWidth());
+        btnReturn->setSizePolicy(sizePolicy6);
+
+        horizontalLayout->addWidget(btnReturn);
+
+        labTitle = new QLabel(widgetTop);
+        labTitle->setObjectName(QStringLiteral("labTitle"));
+        QSizePolicy sizePolicy7(QSizePolicy::Expanding, QSizePolicy::Preferred);
+        sizePolicy7.setHorizontalStretch(0);
+        sizePolicy7.setVerticalStretch(0);
+        sizePolicy7.setHeightForWidth(labTitle->sizePolicy().hasHeightForWidth());
+        labTitle->setSizePolicy(sizePolicy7);
+        labTitle->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout->addWidget(labTitle);
+
+        btnMsg = new QPushButton(widgetTop);
+        btnMsg->setObjectName(QStringLiteral("btnMsg"));
+        sizePolicy6.setHeightForWidth(btnMsg->sizePolicy().hasHeightForWidth());
+        btnMsg->setSizePolicy(sizePolicy6);
+
+        horizontalLayout->addWidget(btnMsg);
+
+
+        verticalLayout->addWidget(widgetTop);
+
+
+        gridLayout_2->addWidget(widgetMain, 0, 0, 1, 1);
+
 
         retranslateUi(MainPage);
 
-        stackedWidget->setCurrentIndex(3);
+        stackedWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainPage);
@@ -695,15 +815,30 @@ public:
     void retranslateUi(QWidget *MainPage)
     {
         MainPage->setWindowTitle(QApplication::translate("MainPage", "MainPage", Q_NULLPTR));
-        btnReturn->setText(QString());
-        labTitle->setText(QApplication::translate("MainPage", "0", Q_NULLPTR));
-        btnMsg->setText(QString());
         btnShow->setText(QString());
         btnHeater->setText(QString());
         btnAirCon->setText(QString());
         btnLED->setText(QString());
         btnWindow->setText(QString());
         btnCancellation->setText(QString());
+        label_2->setText(QApplication::translate("MainPage", "\344\272\214\346\260\247\345\214\226\347\242\2631\357\274\232", Q_NULLPTR));
+        label_13->setText(QString());
+        label_7->setText(QApplication::translate("MainPage", "\346\271\277\345\272\2461\357\274\232", Q_NULLPTR));
+        label_14->setText(QString());
+        label_10->setText(QApplication::translate("MainPage", "\345\217\215\345\260\2041\357\274\232", Q_NULLPTR));
+        label_15->setText(QString());
+        label_5->setText(QApplication::translate("MainPage", "\345\244\247\346\260\224\345\216\2131\357\274\232", Q_NULLPTR));
+        label_16->setText(QString());
+        label_8->setText(QApplication::translate("MainPage", "\345\205\211\347\205\2471\357\274\232", Q_NULLPTR));
+        label_17->setText(QString());
+        label_11->setText(QApplication::translate("MainPage", "\346\270\251\345\272\2461\357\274\232", Q_NULLPTR));
+        label_18->setText(QString());
+        label_6->setText(QApplication::translate("MainPage", "\347\201\253\345\205\2111\357\274\232", Q_NULLPTR));
+        label_19->setText(QString());
+        label_9->setText(QApplication::translate("MainPage", "\345\257\271\345\260\2041\357\274\232", Q_NULLPTR));
+        label_20->setText(QString());
+        label_12->setText(QApplication::translate("MainPage", "\347\264\253\345\244\226\347\272\2771\357\274\232", Q_NULLPTR));
+        label_21->setText(QString());
         heartBtn_2->setText(QApplication::translate("MainPage", "\346\264\227\346\276\241\347\203\255\346\260\264\345\231\250\345\274\200\345\205\263", Q_NULLPTR));
         heartBtn->setText(QApplication::translate("MainPage", "\347\203\247\346\260\264\347\203\255\346\260\264\345\231\250\345\274\200\345\205\263", Q_NULLPTR));
         label_3->setText(QApplication::translate("MainPage", "\350\257\267\350\276\223\345\205\245\347\203\255\346\260\264\345\231\250\346\270\251\345\272\246\357\274\232", Q_NULLPTR));
@@ -742,6 +877,9 @@ public:
         curtainsBtn_2->setText(QApplication::translate("MainPage", "\347\252\227\345\270\2302\345\274\200\345\205\263", Q_NULLPTR));
         curtainsBtn_3->setText(QApplication::translate("MainPage", "\347\252\227\345\270\2303\345\274\200\345\205\263", Q_NULLPTR));
         curtainsBtn_4->setText(QApplication::translate("MainPage", "\347\252\227\345\270\2304\345\274\200\345\205\263", Q_NULLPTR));
+        btnReturn->setText(QString());
+        labTitle->setText(QApplication::translate("MainPage", "0", Q_NULLPTR));
+        btnMsg->setText(QString());
     } // retranslateUi
 
 };

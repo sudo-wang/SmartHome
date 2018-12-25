@@ -2,6 +2,7 @@
 #define MAINPAGE_H
 
 #include <QWidget>
+#include <QTimer>
 
 class QToolButton;
 
@@ -36,6 +37,8 @@ private slots:
     void buttonClicked();
     void on_btnReturn_pressed();
     void on_btnMsg_pressed();
+
+    void updateUITimerSlot();
 
     void on_heartBtn_stateChanged(int arg1);
 
@@ -85,11 +88,14 @@ private slots:
 
     void on_airBtn_stateChanged(int arg1);
 
+    void on_btnShow_clicked();
+
 signals:
     void LogOffSignal();
 
 private:
     Ui::MainPage *ui;
+    QTimer *updateUITimer;
     int heart;
     int te;               // 记录空调的温度,赋予初值为25
 };
